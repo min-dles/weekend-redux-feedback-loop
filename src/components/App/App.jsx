@@ -4,6 +4,7 @@ import axios from 'axios';
 import './App.css';
 import Home from '../Home/Home.jsx';
 import Review from '../Review/Review.jsx';
+import Admin from '../Admin/Admin.jsx';
 
 function App() {
 
@@ -24,7 +25,9 @@ function App() {
         <Route exact path="/review">
           <Review />
         </Route>
-        <Route exact path="/admin"></Route>
+        <Route exact path="/admin">
+          <Admin />
+        </Route>
       </Router>
     </div>
   );

@@ -36,3 +36,15 @@ This project is a feedback survey modeled after Prime Digital Academy's student 
     - Text area, user is NOT required to fill this out. SQL form shows this is not required already. 
 - Review component:
     - User can review (but not edit) their responses before hitting "submit". After submit has been pressed, user is rerouted back to home page and can go thru the survey again if they want. 
+
+## Example of JSON POST data:
+
+```JSON
+
+{
+    "feeling": 4,
+    "understanding": 4,
+    "support": 5,
+    "comments": "Doing Great!"
+}
+```

@@ -4,6 +4,8 @@ const pool = require('../modules/pool.js');
 
 // STRETCH GOAL - will need to show all DB info 
 // ordered by date (newest entries at top of table)
+// Can see the database table at:
+    // localhost:5000/feedback/admin
 router.get('/admin', (req, res) => {
     const sqlText = `
         SELECT * FROM feedback
