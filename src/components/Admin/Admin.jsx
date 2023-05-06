@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import axios from 'axios';
 
-function Admin() {
+function Admin(props) {
 
     useEffect(() => {
         fetchFeedbackData();
@@ -35,7 +35,8 @@ function Admin() {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>test</td>
+                        {/* <td>{props.feedback.feeling}</td> */}
+                        <td>TEST</td>
                         <td>3</td>
                         <td>3</td>
                         <td>Comments placeholder</td>

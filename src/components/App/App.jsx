@@ -5,6 +5,8 @@ import './App.css';
 import Home from '../Home/Home.jsx';
 import Review from '../Review/Review.jsx';
 import Admin from '../Admin/Admin.jsx';
+import RateFeeling from '../RateFeeling/RateFeeling.jsx';
+import RateUnderstanding from '../RateUnderstanding/RateUnderstanding.jsx';
 
 function App() {
 
@@ -18,8 +20,12 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/feeling"></Route>
-        <Route exact path="/understanding"></Route>
+        <Route exact path="/feeling">
+          <RateFeeling />
+        </Route>
+        <Route exact path="/understanding">
+          <RateUnderstanding />
+        </Route>
         <Route exact path="/support"></Route>
         <Route exact path="comments"></Route>
         <Route exact path="/review">
