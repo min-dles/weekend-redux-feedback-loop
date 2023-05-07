@@ -1,4 +1,3 @@
-import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 
@@ -6,7 +5,6 @@ function RateUnderstanding() {
 
     const [chooseRating, setChooseRating] = useState('');
     const dispatch = useDispatch();
-    // const history = useHistory();
 
     const handleSubmit = (event) => {
         event.preventDefault();
