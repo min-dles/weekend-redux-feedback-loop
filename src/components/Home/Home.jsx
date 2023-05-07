@@ -1,8 +1,13 @@
+import { useHistory } from 'react-router-dom';
+
 function Home() {
+
+    const history = useHistory();
 
     const handleClick = (event) => {
         event.preventDefault();
         console.log('Button was clicked');
+        history.push('/feeling');
     }
 
     return (
