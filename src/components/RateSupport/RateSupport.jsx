@@ -1,6 +1,6 @@
-import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function RateSupport() {
 
@@ -37,7 +37,7 @@ function RateSupport() {
                 <option value="5">5 - Overall, I feel supported in my learning.</option>
                 <option value="6">6 - I feel very supported at this time!</option>
             </select>
-            <button>click</button>
+            <button>CONTINUE</button>
         </form>
     )
 }

@@ -23,17 +23,14 @@ function App() {
 
         <Route exact path="/">
           <Home />
-          <button><Link to="/feeling">CONTINUE</Link></button>
         </Route>
 
         <Route exact path="/feeling">
           <RateFeeling />
-          <button><Link to="/understanding">CONTINUE</Link></button>
         </Route>
 
         <Route exact path="/understanding">
           <RateUnderstanding />
-          <button><Link to="/support">CONTINUE</Link></button>
         </Route>
 
         <Route exact path="/support">
@@ -42,12 +39,10 @@ function App() {
 
         <Route exact path="/comments">
           <Comments />
-          <button><Link to="/review">CONTINUE</Link></button>
         </Route>
 
         <Route exact path="/review">
           <Review />
-          <button><Link to="/">SUBMIT</Link></button>
         </Route>
 
         <Route exact path="/admin">
