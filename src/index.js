@@ -8,18 +8,6 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
-// ADD REDUCER(S):
-// const feedback = (state={}, action) => {
-//     if (action.type === 'ADD_FEEDBACK') {
-//         const feedbackSubmission = action.payload;
-//         const copyOfState = [...state];
-//         copyOfState.push(feedbackSubmission);
-//         return copyOfState;
-//     }
-
-//     return state;
-// }
-
 // RateFeeling:
 const feelingFeedback = (state='', action) => {
     if (action.type === 'ADD_FEELING') {
@@ -55,7 +43,6 @@ const commentary = (state='', action) => {
 
 const theStore = createStore(
     combineReducers({
-        // feedback,
         feelingFeedback,
         understandingFeedback,
         supportFeedback,
