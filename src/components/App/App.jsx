@@ -7,6 +7,8 @@ import Review from '../Review/Review.jsx';
 import Admin from '../Admin/Admin.jsx';
 import RateFeeling from '../RateFeeling/RateFeeling.jsx';
 import RateUnderstanding from '../RateUnderstanding/RateUnderstanding.jsx';
+import RateSupport from '../RateSupport/RateSupport.jsx';
+import Comments from '../Comments/Comments.jsx';
 
 function App() {
 
@@ -17,23 +19,35 @@ function App() {
           <h1 className='App-title'>Feedback!</h1>
           <h4>Don't forget it!</h4>
         </header>
+
         <Route exact path="/">
           <Home />
         </Route>
+
         <Route exact path="/feeling">
           <RateFeeling />
         </Route>
+
         <Route exact path="/understanding">
           <RateUnderstanding />
         </Route>
-        <Route exact path="/support"></Route>
-        <Route exact path="comments"></Route>
+
+        <Route exact path="/support">
+          <RateSupport />
+        </Route>
+
+        <Route exact path="/comments">
+          <Comments />
+        </Route>
+
         <Route exact path="/review">
           <Review />
         </Route>
+
         <Route exact path="/admin">
           <Admin />
         </Route>
+
       </Router>
     </div>
   );
