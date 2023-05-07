@@ -3,9 +3,39 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './components/App/App';
 
+// IMPORT REDUX: 
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import logger from 'redux-logger';
+
+// ADD REDUCER(S):
+const feedback = (state={}, action) => {
+    if (action.type === 'ADD_FEEDBACK') {
+        const feedbackSubmission = action.payload;
+
+        const copyOfState = [...state];
+        copyOfState.push(feedbackSubmission);
+        return copyOfState;
+    }
+
+    return state;
+}
+
+const theStore = createStore(
+    combineReducers({
+        feedback
+    }),
+    applyMiddleware(
+        logger
+    )
+)
+
+// ADD PROVIDER AROUND APP: 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <App />
+        <Provider store={theStore}>
+            <App />
+        </Provider>
     </React.StrictMode>
 );
