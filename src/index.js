@@ -21,9 +21,19 @@ const feedback = (state={}, action) => {
     return state;
 }
 
+// RateFeeling:
+const feelingFeedback = (state={}, action) => {
+    if (action.type === 'ADD_FEELING') {
+        console.log('redux action:', action, 'redux state:', state)
+        return state;
+    }
+    return state;
+}
+
 const theStore = createStore(
     combineReducers({
-        feedback
+        feedback,
+        feelingFeedback
     }),
     applyMiddleware(
         logger
