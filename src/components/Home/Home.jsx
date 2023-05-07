@@ -14,7 +14,7 @@ function Home() {
         <div>
             <h2>START SURVEY:</h2>
             <p>Complete the feedback survey by answering all questions.</p>
-            <button onClick={handleClick}>CONTINUE</button>
+            <button className="continue" onClick={handleClick}>CONTINUE</button>
         </div>
     );
 }

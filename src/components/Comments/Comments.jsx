@@ -31,7 +31,7 @@ function Comments() {
                 onChange={(event) => { setCommentary(event.target.value) }}
             >
             </textarea>
-            <button>CONTINUE</button>
+            <button className="continue">CONTINUE</button>
         </form>
     )
 }

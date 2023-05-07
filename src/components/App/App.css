@@ -21,3 +21,12 @@
 h4 {
   font-style: italic;
 }
+
+button {
+  padding: 15px;
+  font-size: 20px;
+}
+
+.continue {
+  text-align: right;
+}

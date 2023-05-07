@@ -37,7 +37,7 @@ function RateFeeling() {
                 <option value="5">5 - Feeling pretty good.</option>
                 <option value="6">6 - Feeling great!</option>
             </select>
-            <button>CONTINUE</button>
+            <button className="continue">CONTINUE</button>
         </form>
     )
 }

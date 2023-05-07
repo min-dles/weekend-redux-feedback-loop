@@ -37,7 +37,7 @@ function RateSupport() {
                 <option value="5">5 - Overall, I feel supported in my learning.</option>
                 <option value="6">6 - I feel very supported at this time!</option>
             </select>
-            <button>CONTINUE</button>
+            <button className="continue">CONTINUE</button>
         </form>
     )
 }
