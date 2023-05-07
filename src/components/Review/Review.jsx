@@ -16,10 +16,20 @@ function Review() {
             feeling: feeling,
             understanding: understanding,
             support: support,
-            commentary: commentary
+            comments: commentary
         }
         console.log('This is your feedback:', data);
-        history.push('/');
+        
+        axios({
+            method: 'POST',
+            url: '/feedback/review',
+            data: data
+        }).then((response) => {
+            console.log('Your axios call went thru:', response);
+            history.push('/');
+        }).catch((error) => {
+            console.log('Oh no there was an error:', error);
+        })
     }
 
     return (
