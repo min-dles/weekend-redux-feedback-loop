@@ -21,7 +21,7 @@ import logger from 'redux-logger';
 // }
 
 // RateFeeling:
-const feelingFeedback = (state={}, action) => {
+const feelingFeedback = (state='', action) => {
     if (action.type === 'ADD_FEELING') {
         console.log('redux action:', action, 'redux state:', state)
         return action.payload;
@@ -30,7 +30,7 @@ const feelingFeedback = (state={}, action) => {
 }
 
 // RateUnderstanding:
-const understandingFeedback = (state={}, action) => {
+const understandingFeedback = (state='', action) => {
     if (action.type === 'ADD_UNDERSTANDING') {
         return action.payload;
     }
@@ -38,7 +38,7 @@ const understandingFeedback = (state={}, action) => {
 }
 
 // RateSupport:
-const supportFeedback = (state={}, action) => {
+const supportFeedback = (state='', action) => {
     if (action.type === 'ADD_SUPPORT') {
         return action.payload;
     }
@@ -46,7 +46,7 @@ const supportFeedback = (state={}, action) => {
 }
 
 // Comments:
-const commentary = (state={}, action) => {
+const commentary = (state='', action) => {
     if (action.type === 'ADD_COMMENTARY') {
         return action.payload;
     }
