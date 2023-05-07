@@ -26,7 +26,7 @@ function Review() {
             data: data
         }).then((response) => {
             console.log('Your axios call went thru:', response);
-            history.push('/');
+            history.push('/success');
         }).catch((error) => {
             console.log('Oh no there was an error:', error);
         })

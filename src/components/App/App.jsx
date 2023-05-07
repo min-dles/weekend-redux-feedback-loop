@@ -1,15 +1,16 @@
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import axios from 'axios';
 import './App.css';
+
+// Import all the components: 
 import Home from '../Home/Home.jsx';
-import Review from '../Review/Review.jsx';
-import Admin from '../Admin/Admin.jsx';
 import RateFeeling from '../RateFeeling/RateFeeling.jsx';
 import RateUnderstanding from '../RateUnderstanding/RateUnderstanding.jsx';
 import RateSupport from '../RateSupport/RateSupport.jsx';
 import Comments from '../Comments/Comments.jsx';
+import Review from '../Review/Review.jsx';
+import Success from '../Review/Success.jsx';
+import Admin from '../Admin/Admin.jsx';
 
 function App() {
 
@@ -43,6 +44,10 @@ function App() {
 
         <Route exact path="/review">
           <Review />
+        </Route>
+
+        <Route exact path="/success">
+          <Success />
         </Route>
 
         <Route exact path="/admin">
