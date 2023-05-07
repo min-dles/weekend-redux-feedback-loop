@@ -1,4 +1,3 @@
-import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 
@@ -6,7 +5,6 @@ function RateFeeling() {
 
     const [chooseRating, setChooseRating] = useState('');
     const dispatch = useDispatch();
-    // const history = useHistory();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -33,11 +31,6 @@ function RateFeeling() {
                     <option value="5">5 - Feeling pretty good.</option>
                     <option value="6">6 - Feeling great!</option>
                 </select>
-
-                <button>CONTINUE</button>
-                {/* <button  type="submit" onClick={() => { history.push('/understanding')}}>
-                    CONTINUE
-                </button> */}
             </form>
         </div>
     )

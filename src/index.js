@@ -9,30 +9,27 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 // ADD REDUCER(S):
-const feedback = (state={}, action) => {
-    if (action.type === 'ADD_FEEDBACK') {
-        const feedbackSubmission = action.payload;
+// const feedback = (state={}, action) => {
+//     if (action.type === 'ADD_FEEDBACK') {
+//         const feedbackSubmission = action.payload;
+//         const copyOfState = [...state];
+//         copyOfState.push(feedbackSubmission);
+//         return copyOfState;
+//     }
 
-        const copyOfState = [...state];
-        copyOfState.push(feedbackSubmission);
-        return copyOfState;
-    }
-
-    return state;
-}
+//     return state;
+// }
 
 // RateFeeling:
-const feelingFeedback = (state=[], action) => {
+const feelingFeedback = (state={}, action) => {
     if (action.type === 'ADD_FEELING') {
         console.log('redux action:', action, 'redux state:', state)
-        const feedbackSubmission = action.payload;
-        const copyOfState = [...state];
-        copyOfState.push(feedbackSubmission);
-        return copyOfState;
+        return action.payload;
     }
     return state;
 }
 
+// RateUnderstanding:
 const understandingFeedback = (state={}, action) => {
     if (action.type === 'ADD_UNDERSTANDING') {
         return action.payload;
@@ -40,11 +37,29 @@ const understandingFeedback = (state={}, action) => {
     return state;
 }
 
+// RateSupport:
+const supportFeedback = (state={}, action) => {
+    if (action.type === 'ADD_SUPPORT') {
+        return action.payload;
+    }
+    return state;
+}
+
+// Comments:
+const commentary = (state={}, action) => {
+    if (action.type === 'ADD_COMMENTARY') {
+        return action.payload;
+    }
+    return state;
+}
+
 const theStore = createStore(
     combineReducers({
-        feedback,
+        // feedback,
         feelingFeedback,
-        understandingFeedback
+        understandingFeedback,
+        supportFeedback,
+        commentary
     }),
     applyMiddleware(
         logger

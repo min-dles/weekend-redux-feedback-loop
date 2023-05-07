@@ -33,11 +33,6 @@ function RateUnderstanding() {
                     <option value="5">5 - I feel adept with this material.</option>
                     <option value="6">6 - Very well; everything makes sense!</option>
                 </select>
-
-                <button>CONTINUE</button>
-                {/* <button onClick={() => { history.push('/support')}}>
-                    CONTINUE
-                </button> */}
             </form>
         </div>
     )
