@@ -1,17 +1,31 @@
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 
 function RateUnderstanding() {
 
-    const history = useHistory();
+    const [chooseRating, setChooseRating] = useState('');
+    const dispatch = useDispatch();
+    // const history = useHistory();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('This was user\'s selection:', chooseRating);
+
+        dispatch({
+            type: 'ADD_UNDERSTANDING',
+            payload: chooseRating
+        })
+    }
 
     return (
         <div>
             <h3>How well are you understanding the content?</h3>
             <p>Using the dropdown list below, choose the option that best corresponds to your overall understanding.</p>
 
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>Choose a rating:</label>
-                <select defaultValue="3">
+                <select value={chooseRating} onChange={(event) => {setChooseRating(event.target.value)}}>
                     <option value="1">1 - At this time, I don't understand the material.</option>
                     <option value="2">2 - A couple things make sense, but I am mostly lost.</option>
                     <option value="3">3 - Overall confused but I get some concepts.</option>
@@ -20,9 +34,10 @@ function RateUnderstanding() {
                     <option value="6">6 - Very well; everything makes sense!</option>
                 </select>
 
-                <button onClick={() => { history.push('/support')}}>
+                <button>CONTINUE</button>
+                {/* <button onClick={() => { history.push('/support')}}>
                     CONTINUE
-                </button>
+                </button> */}
             </form>
         </div>
     )

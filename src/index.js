@@ -22,10 +22,20 @@ const feedback = (state={}, action) => {
 }
 
 // RateFeeling:
-const feelingFeedback = (state={}, action) => {
+const feelingFeedback = (state=[], action) => {
     if (action.type === 'ADD_FEELING') {
         console.log('redux action:', action, 'redux state:', state)
-        return state;
+        const feedbackSubmission = action.payload;
+        const copyOfState = [...state];
+        copyOfState.push(feedbackSubmission);
+        return copyOfState;
+    }
+    return state;
+}
+
+const understandingFeedback = (state={}, action) => {
+    if (action.type === 'ADD_UNDERSTANDING') {
+        return action.payload;
     }
     return state;
 }
@@ -33,7 +43,8 @@ const feelingFeedback = (state={}, action) => {
 const theStore = createStore(
     combineReducers({
         feedback,
-        feelingFeedback
+        feelingFeedback,
+        understandingFeedback
     }),
     applyMiddleware(
         logger

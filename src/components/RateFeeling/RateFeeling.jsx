@@ -5,8 +5,8 @@ import { useState } from 'react';
 function RateFeeling() {
 
     const [chooseRating, setChooseRating] = useState('');
-    const history = useHistory();
     const dispatch = useDispatch();
+    // const history = useHistory();
 
     const handleSubmit = (event) => {
         event.preventDefault();
